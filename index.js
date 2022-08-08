@@ -10,9 +10,16 @@ renderAllBooks();
 const form = document.getElementById('add-book');
  form.addEventListener('submit', (e) => {
   const addedBooks = formValues();
-  setLocalStorage(addedBooks);
-  //renderAddedBook(addedBooks);
-  
+ 
+  // Validate form before creating book object
+  const errorMsg = document.getElementById('error');
+  if (addedBooks.title.length === 0 || addedBooks.author.length === 0) {
+    e.preventDefault();
+    errorMsg.textContent = 'All fields must be filled in!';
+  }else{
+    setLocalStorage(addedBooks);
+  }
+    
 });
   
 // Events Remove books
