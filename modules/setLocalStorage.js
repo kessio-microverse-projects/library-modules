@@ -1,8 +1,9 @@
-import { getLocalStorageBooks } from "./getLocalStorage.js";
+import getLocalStorageBooks from './getLocalStorage.js';
 
-export const setLocalStorage = (book) => {
-    const books = getLocalStorageBooks();
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
+  const setLocalStorage = (book) => {
+  const books = getLocalStorageBooks();
+  books.push(book);
+  localStorage.setItem('books', JSON.stringify(books));
+};
 
-  }
+export default setLocalStorage;

@@ -1,10 +1,10 @@
-import { getLocalStorageBooks } from "./getLocalStorage.js";
+import getLocalStorageBooks from './getLocalStorage.js';
 
-export const renderAllBooks = () => {
-    const booksContainer = document.querySelector('.book-details');
-    const allBooks = getLocalStorageBooks();
-    allBooks.forEach(book => { 
-       booksContainer.innerHTML += `
+const renderAllBooks = () => {
+  const booksContainer = document.querySelector('.book-details');
+  const allBooks = getLocalStorageBooks();
+  allBooks.forEach((book) => {
+    booksContainer.innerHTML += `
       <tr>
       <td colspan="2">      
           "${book.title}" by ${book.author}
@@ -12,8 +12,8 @@ export const renderAllBooks = () => {
       <td>
           <button class="delete-btn" id="${book.myid} ">Remove</button>
       </td>
-  </tr>`;  
-        
-       });
-    
-  }
+  </tr>`;
+  });
+};
+
+export default renderAllBooks;
