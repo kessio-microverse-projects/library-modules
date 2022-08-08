@@ -1,4 +1,4 @@
-  const getLocalStorageBooks = () => {
+const getLocalStorageBooks = () => {
   let bookks;
   if (localStorage.getItem('books') === null) {
     bookks = [];

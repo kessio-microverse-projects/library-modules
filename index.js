@@ -5,7 +5,7 @@ import formValues from './modules/formValues.js';
 import renderAllBooks from './modules/renderAllBooks.js';
 import setLocalStorage from './modules/setLocalStorage.js';
 import RemoveBookFromLocalStorage from './modules/RemoveBookFromLocalStorage.js';
-import { dateTime } from './modules/dateTime.js';
+import dateTime from './modules/dateTime.js';
 
 getLocalStorageBooks();
 toggleNavItems();

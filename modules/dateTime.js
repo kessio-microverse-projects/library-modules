@@ -1,3 +1,5 @@
-import { DateTime } from './luxon.js';
+import { DateTime } from './luxon.js'; /* eslint-disable */
 
-export const dateTime = () => DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+const dateTime = () => DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+
+export default dateTime;

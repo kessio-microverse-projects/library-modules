@@ -1,4 +1,4 @@
- const toggleNavItems = () => {
+const toggleNavItems = () => {
   const menuItems = document.querySelectorAll('.menu-items');
   const container = document.querySelectorAll('.container');
   menuItems.forEach((navLink) => {
