@@ -90,13 +90,14 @@ html {
   .container {
     display: none;
   }
-  
-  
-  .added-book {
-    background-color: red;
-    opacity: 0.9;
+
+  .date-time {
+   float: right;
+   margin: 4px 12px;
+   font-size: 18px;
+   font-weight: 700;
   }
-  
+
   .container.active {
     display: flex;
     flex-direction: column;

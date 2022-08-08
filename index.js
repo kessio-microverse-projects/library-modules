@@ -4,18 +4,25 @@ import {formValues} from "./modules/formValues.js";
 import { renderAllBooks } from "./modules/renderAllBooks.js";
 import { setLocalStorage } from "./modules/setLocalStorage.js";
 import { RemoveBookFromLocalStorage } from "./modules/RemoveBookFromLocalStorage.js";
+import { dateTime } from './modules/dateTime.js';
+
 getLocalStorageBooks();
-renderAllBooks();
 toggleNavItems();
+renderAllBooks();
+
+const timeDate = dateTime();
+const datetime = document.querySelector('.date-time');
+datetime.innerHTML = timeDate;
+
+
 //Event add books
 const form = document.getElementById('add-book');
- form.addEventListener('submit', (e) => {
+ form.addEventListener('submit', () => {
   const addedBooks = formValues();
  
   // Validate form before creating book object
   const errorMsg = document.getElementById('error');
   if (addedBooks.title.length === 0 || addedBooks.author.length === 0) {
-    e.preventDefault();
     errorMsg.textContent = 'All fields must be filled in!';
   }else{
     setLocalStorage(addedBooks);
