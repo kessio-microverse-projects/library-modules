@@ -1,7 +1,8 @@
 import { getLocalStorageBooks } from "./modules/getLocalStorage.js";
 import {formValues} from "./modules/formValues.js";
-
+import { renderAllBooks } from "./modules/renderAllBooks.js";
 getLocalStorageBooks();
+renderAllBooks();
 const form = document.getElementById('add-book');
  form.addEventListener('submit', (e) => {
    e.preventDefault();
