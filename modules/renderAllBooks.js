@@ -1,5 +1,5 @@
 import { getLocalStorageBooks } from "./getLocalStorage.js";
-export function renderAllBooks() {
+export const renderAllBooks = () => {
     const booksContainer = document.querySelector('.book-details');
     const allBooks = getLocalStorageBooks();
     allBooks.forEach(book => { 

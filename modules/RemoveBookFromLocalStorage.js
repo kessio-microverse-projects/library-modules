@@ -1,6 +1,6 @@
 import { getLocalStorageBooks } from "./getLocalStorage.js";
 
-export function RemoveBookFromLocalStorage(removeid) {
+export const RemoveBookFromLocalStorage = (removeid) => {
     const booksList = getLocalStorageBooks();
     const booksArray = booksList;
     const newlist = booksArray.filter((item) => parseInt(removeid, 10) !== item.myid);

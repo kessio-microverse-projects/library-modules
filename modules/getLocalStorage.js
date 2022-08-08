@@ -1,4 +1,4 @@
-export function getLocalStorageBooks() {
+export const getLocalStorageBooks = () => {
     let bookks;
     if (localStorage.getItem('books') === null) {
       bookks = [];
