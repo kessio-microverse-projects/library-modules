@@ -87,10 +87,10 @@ html {
     font-weight: 900;
   }
   
- /* .container {
+  .container {
     display: none;
   }
-  */
+  
   
   .added-book {
     background-color: red;

@@ -1,3 +1,4 @@
+import { toggleNavItems } from "./modules/toggleNavItems.js";
 import { getLocalStorageBooks } from "./modules/getLocalStorage.js";
 import {formValues} from "./modules/formValues.js";
 import { renderAllBooks } from "./modules/renderAllBooks.js";
@@ -5,7 +6,7 @@ import { setLocalStorage } from "./modules/setLocalStorage.js";
 import { RemoveBookFromLocalStorage } from "./modules/RemoveBookFromLocalStorage.js";
 getLocalStorageBooks();
 renderAllBooks();
-
+toggleNavItems();
 //Event add books
 const form = document.getElementById('add-book');
  form.addEventListener('submit', (e) => {
